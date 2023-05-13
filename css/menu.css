@@ -64,14 +64,17 @@ body {
 
 h1, h2, h3, h4, h5, h6, p, a, i {
     text-decoration: none;
+    color: white;
 }
 
 h1 {
     font-size: 7.5rem;
+    text-align: center;
 }
 
 h2 {
     font-size: 6rem;
+    text-align: center;
 }
 
 h3 {
@@ -84,6 +87,7 @@ h4 {
 
 p, a {
     font-size: 3rem;
+    text-align: center;
 }
 
 /* header section */
@@ -94,6 +98,28 @@ header {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+   
+}
+
+header > div{
+    background-color: rgb(0, 4, 17, .8);
+    padding: 2%;
+}
+
+nav div{
+    text-align: center; 
+}
+
+nav a{
+    font-size: 4rem;
+    padding: 2% 5%;  
+    display: inline-block;
+}
+
+nav i{
+    color: white;
+    font-size: 4rem;
+    margin: 0 2%;
 }
 
 /* spacer */
@@ -117,16 +143,100 @@ header {
     background-color: rgb(0, 4, 17);
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; 
 }
+
+.menu-background{
+    background-color: rgb(0, 4, 17, .8);
+    padding-top: 5%;    
+}
+
+.menu-container{
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+}
+
+.menu-section{
+    padding: 4% 0;
+    width: 40vw;
+}
+
+.menu-items{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 32vw;
+}
+
+.menu-items p{
+    text-align: left;
+    padding-bottom: 3%;
+    width: 28vw;
+}
+
+hr{
+    border: 0;
+}
+
 
 /* footer section */
 footer {
     width: 100%;
-    height: 15vh;
+    height: 18vh;
     padding-top: 2.5vh;
     font-size: 3rem;
+    background-color: rgb(0, 4, 17);
+    color: white;
+    display: flex;
+    justify-content: space-between;
 }
+.nav{
+    width: 65%;  
+}
+
+footer nav {
+    display: flex;
+    justify-content: space-around;
+    align-content: flex-start;
+}
+
+footer a{
+    margin: 0;   
+    font-size: 3rem;
+    display: flex;
+    align-content: flex-start;
+}
+
+.nav p {
+    text-align: right;
+    padding-right: 5%;
+    padding-bottom: 5%;
+    font-size: 2rem;
+  }
+
+  .email{
+    text-align: center;
+    width: 25%;
+  }
+
+  .email button{
+    font-size: 3rem;
+    padding: 2%;
+  }
+
+  .email input{
+    color: grey;
+  }
+
+  #email{
+    font-size: 2.5rem;
+    width: 70%;
+    padding: 2%;
+  }
+
 
 /* mobile media query */
 @media (max-width: 428px) {
@@ -138,15 +248,127 @@ footer {
         font-size: 4rem;
     }
 
+    header h1{
+        font-size: 6rem;
+    }
+
     /* menu */
     .menu {
-        background-image: none;
+        background-image: none;     
+        color: black;
     }
+
+    .menu-background{
+        background-color: rgb(225, 239, 230);
+    }
+
+    .menu-section h3{
+        display: flex;
+        justify-content: center;       
+        color: black;
+        border: 5px solid rgb(0, 4, 17);
+        text-align: center;
+        margin-left: 65vw;
+    }
+    .menu h2{
+        color: black;
+    }
+
+    .menu h3{
+        width: 250px;
+        text-align: center;
+    }
+
+    .menu h4{
+        color: black;
+        text-align: center;
+    }
+
+    .menu p{
+        color: black;
+        text-align: center;
+    }
+
+    .menu-container{
+        flex-direction: column;
+        justify-content: center;
+
+    }
+    .menu-section{
+        padding: 4% 0;
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .menu-items{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    hr{
+        width: 65vw;
+        margin-left: 20vw;
+        border: 3px solid rgb(0, 4, 17);    
+    }
+    
+    .menu-items p{
+    text-align: center;
+    width: 95vw; 
+}
+
+
+
+
 
     /* footer section */
     footer {
         height: auto;
         padding-top: 2.5vh;
-        font-size: 2rem;
+        font-size: 2rem;        
+        flex-direction: column;
+        justify-content: center;
     }
+    .nav{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    footer nav {
+        flex-direction: column;
+    }
+
+    footer a{
+        justify-content: center;
+        margin-left: 25vw;
+        padding-top: 3%;
+    }
+
+    .nav p {
+        text-align: center;
+        font-size: 1.5rem;
+        padding-left: 50%;
+        width: 90vw;
+      }
+
+      .email{
+        width: 100%;
+      }
+      .email p{
+        padding-bottom: 3%;
+      }
+    
+      .email button{
+        font-size: 2.5rem;
+        width: 90%;
+      }
+    
+      #email{
+        width: 90%;
+      }
+
 }
